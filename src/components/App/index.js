@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-import Svg from '../SVG/index';
-import './App.css';
+import { Link } from 'react-router-dom';
+import './style.css';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Svg size='300' dur='2' delay='true' backgroundColor='#f1f1f1'/>
+        <Link to="/personal">Personal</Link>
+        <Link to="/professional">Professional</Link>
       </div>
     );
   }

@@ -9,7 +9,7 @@ class Svg extends Component {
       dur     : this.props.dur,
       halfDur : this.props.dur / 2,
       quarDur : this.props.dur / 4,
-      delayDur: this.props.delay ? this.props.dur * .08 : 0,
+      delayDur: this.props.delay || 0,
 
       backgroundColor: this.props.backgroundColor || '#000',
     }
