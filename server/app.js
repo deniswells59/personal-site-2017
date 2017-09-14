@@ -5,15 +5,26 @@ import path from 'path';
 import morgan from 'morgan';
 import bodyParser from 'body-parser';
 
-import { StaticRouter as Router, matchPath } from 'react-router';
-import App from '../src/components/App';
+var webpack = require('webpack');
+var webpackConfig = require('../webpack.config');
+var compiler = webpack(webpackConfig);
 
 const app = express();
 const port = process.env.PORT || 3000;
 const server = http.createServer(app);
+
 const routes = [
   '/',
 ];
+
+app.use(require("webpack-dev-middleware")(compiler, {
+  noInfo: true, publicPath: webpackConfig.output.publicPath
+}));
+app.use(require("webpack-hot-middleware")(compiler, {
+ 'log': false,
+ 'path': '/__webpack_hmr',
+ 'heartbeat': 10 * 1000
+}));
 
 app.use(morgan('dev'));
 app.use(bodyParser.json());
@@ -22,19 +33,7 @@ app.use(express.static(path.join(__dirname, '../public')));
 
 
 app.use('*', (req, res) => {
-  const match = routes.reduce((acc, route) => matchPath(req.url, route, { exact: true }) || acc, null);
-    if (!match) {
-        res.status(404).send(render(<NoMatch />));
-        return;
-    }
-
-    res.status(200).send(render(
-      (
-        <StaticRouter context={{}} location={req.url}>
-          <App page='/' />
-        </StaticRouter>
-      )
-    ))
+  res.sendFile(path.join(__dirname, '../public/index.html'))
 });
 
 server.listen(port, err => {

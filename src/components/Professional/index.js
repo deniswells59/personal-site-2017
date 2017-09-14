@@ -6,7 +6,7 @@ class Professional extends Component {
   render() {
     return (
       <div className="Professional">
-        <Svg size="300" dur="2.5" delay=".5" backgroundColor="transparent" />
+        <Svg size="100" dur="2.5" delay=".5" backgroundColor="transparent" />
       </div>
     );
   }
