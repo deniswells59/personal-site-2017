@@ -9,7 +9,7 @@ class Professional extends Component {
     return (
       <div className="Professional">
         <div className="header">
-          <div className="info-wrapper">
+          <div className="info-wrapper" id="info">
             <Logo size="100" dur="2" delay=".5" backgroundColor="transparent" />
 
           </div>
