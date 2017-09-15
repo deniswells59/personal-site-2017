@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './style.css';
 
-class Svg extends Component {
+class Logo extends Component {
   constructor(props) {
     super(props);
 
@@ -46,4 +46,4 @@ class Svg extends Component {
   }
 }
 
-export default Svg;
+export default Logo;

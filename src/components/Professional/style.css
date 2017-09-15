@@ -1,3 +1,20 @@
-.Professional {
-  background-color: rgba(24, 196, 219, 0.8);
+.header {
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  background: #00bfff; /* Old browsers */
+  background: -moz-linear-gradient(top,  #00bfff 0%, #87ceeb 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #00bfff 0%,#87ceeb 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #00bfff 0%,#87ceeb 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00bfff', endColorstr='#87ceeb',GradientType=0 ); /* IE6-9 */
+}
+
+.info-wrapper {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 40%;
+  top: 30vh;
+  margin-left: auto;
+  margin-right: auto;
 }
