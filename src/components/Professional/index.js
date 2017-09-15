@@ -14,8 +14,9 @@ class Professional extends Component {
 
           </div>
           <div className="layer-wrapper">
-            <Parallax opacity='0.3' size='100' perRow='4' rows='5' />
-            <Parallax opacity='0.5' size='200' perRow='3' rows='3' />
+            <Parallax opacity='0.4' size='100' xOffset=".15" yOffset=".15" />
+            <Parallax opacity='0.6' size='200' xOffset=".25" yOffset=".25" />
+            <Parallax opacity='1'   size='280' xOffset=".40"  yOffset=".3" />
           </div>
         </div>
       </div>

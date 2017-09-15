@@ -10,30 +10,46 @@ class Parallax extends Component {
   }
 
   generateClouds() {
+    let numPerRow = 2;
+    let rows = 2;
     let clouds = [];
     let width  = window.innerWidth;
     let height = window.innerHeight;
+    let size   = parseInt(this.props.size);
 
-    let xOffset      = width  / this.props.perRow;
-    let yOffset      = height / this.props.rows;
+    let xOffset = width  * this.props.xOffset;
+    let yOffset = height * this.props.yOffset;
+
+    let sum = 0;
+    while(sum <= width) {
+      sum += xOffset + (size / 2);
+      numPerRow += 1;
+    }
+
+    let newSum = 0;
+    while(newSum <= height) {
+      newSum += yOffset + (size / 2);
+      rows += 1;
+    }
 
     let center = {
       top: height - (height * .3),
       bottom: height - (height * .3 + height * .5),
-      left: width * .5 - width * .2 - this.props.size,
-      right: width * .5 + width * .2
+      left: width * .5 - width * .2 - size,
+      right: width * .5 + width * .2 + size
     }
 
-    for(let i = 0; i < this.props.rows; i++) {
-      let bottom = yOffset * i + yOffset / 3;
-      let top    = bottom + parseInt(this.props.size * .5);
+    for(let i = 0; i < rows; i++) {
+      let bottom = yOffset * i;
+      let top    = bottom + size;
 
-      for(let ii = 0; ii < this.props.perRow; ii++) {
-        let left = xOffset * ii + xOffset / 4;
-        let right = left + width * .4;
+      for(let ii = 0; ii < numPerRow; ii++) {
+        let left = xOffset * ii;
+
 				if(i % 2) left += xOffset / 2;
+        let right = left + size;
 
-        if(left < center.left || left > center.right ||
+        if(left < center.left || right > center.right ||
             bottom > center.top || top < center.bottom) {
           clouds.push(
             <Cloud key={ `${i}-${ii}` }
