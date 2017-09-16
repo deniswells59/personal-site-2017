@@ -14,11 +14,15 @@ class Professional extends Component {
 
           </div>
           <div className="layer-wrapper">
-            <Parallax opacity='0.4' size='100' xOffset=".15" yOffset=".15" />
-            <Parallax opacity='0.6' size='200' xOffset=".25" yOffset=".25" />
-            <Parallax opacity='1'   size='280' xOffset=".40"  yOffset=".3" />
+            <Parallax opacity='0.3' scrollOffset='0.15' size='20'/>
+            <Parallax opacity='0.6' scrollOffset='0.23' size='30'/>
+            <Parallax opacity='1'   scrollOffset='0.25' size='35'/>
+
+
           </div>
         </div>
+
+        <div className="scroll-space"></div>
       </div>
     );
   }

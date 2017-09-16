@@ -1,76 +1,90 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import Cloud from '../Cloud';
+import Star from '../Star';
 import './style.css';
 
 class Parallax extends Component {
   constructor(props) {
     super(props);
 
+    this.state = {
+      top: 0,
+    }
+
+    this.handleScroll = this.handleScroll.bind(this);
   }
 
-  generateClouds() {
-    let numPerRow = 2;
-    let rows = 2;
-    let clouds = [];
-    let width  = window.innerWidth;
-    let height = window.innerHeight;
-    let size   = parseInt(this.props.size);
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
+  }
 
-    let xOffset = width  * this.props.xOffset;
-    let yOffset = height * this.props.yOffset;
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
 
-    let sum = 0;
-    while(sum <= width) {
-      sum += xOffset + (size / 2);
-      numPerRow += 1;
-    }
+  handleScroll(e) {
+    let scrollPos = window.scrollY;
+    this.setState({ top: scrollPos * this.props.scrollOffset });
+  }
 
-    let newSum = 0;
-    while(newSum <= height) {
-      newSum += yOffset + (size / 2);
-      rows += 1;
-    }
+  generateStars() {
+    let skyWidth  = window.innerWidth;
+    let skyHeight = window.innerHeight;
 
-    let center = {
-      top: height - (height * .3),
-      bottom: height - (height * .3 + height * .5),
-      left: width * .5 - width * .2 - size,
-      right: width * .5 + width * .2 + size
-    }
+    return this.createGrid(skyWidth, skyHeight);
+  }
 
-    for(let i = 0; i < rows; i++) {
-      let bottom = yOffset * i;
-      let top    = bottom + size;
+  createGrid(width, height) {
+    let starsToReturn = [];
+    let numberOfCols  = Math.floor(width  / 100);
+    let numberOfRows  = Math.floor(height / 100);
 
-      for(let ii = 0; ii < numPerRow; ii++) {
-        let left = xOffset * ii;
+    let colWidth  = width  / numberOfCols;
+    let rowHeight = height / numberOfRows;
 
-				if(i % 2) left += xOffset / 2;
-        let right = left + size;
+    for(let i = 0; i <= numberOfRows; i++) {
+      let startPoint = rowHeight * -1;
+      let top        = startPoint + rowHeight * i;
 
-        if(left < center.left || right > center.right ||
-            bottom > center.top || top < center.bottom) {
-          clouds.push(
-            <Cloud key={ `${i}-${ii}` }
-            size={ this.props.size }
-            left={ left }
-            bottom={ bottom }
-            opacity= { this.props.opacity }
-            />
-          )
-        }
+      let coords = {
+        top,
+        bottom: top + rowHeight,
+      };
 
+      for(let ii = 0; ii <= numberOfCols; ii++) {
+        let beginPoint = colWidth * -1 ;
+        let left       = beginPoint + colWidth * ii;
+
+        coords.left  = left;
+        coords.right = left + colWidth;
+
+        starsToReturn.push(this.placeStar(coords, `${i}-${ii}`));
       }
     }
+    return starsToReturn;
+  }
 
-    return clouds;
+  placeStar(coords, key) {
+    let randomBottom = this.randomIntFromInterval(coords.bottom, coords.top);
+    let randomLeft   = this.randomIntFromInterval(coords.left, coords.right);
+
+    return <Star
+              key={ key }
+              size={ this.props.size }
+              bottom={ randomBottom }
+              left={ randomLeft }
+              opacity={ this.props.opacity } />
+  }
+
+  randomIntFromInterval(min,max) {
+    return Math.floor(Math.random()*(max-min+1)+min);
   }
 
   render() {
     return (
-      <div className="Parallax">
-        { this.generateClouds() }
+      <div className="Parallax"
+           style={{ top: `${this.state.top}px` }}>
+        { this.generateStars() }
       </div>
     );
   }

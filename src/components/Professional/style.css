@@ -2,11 +2,9 @@
   height: 100vh;
   width: 100vw;
   text-align: center;
-  background: #00bfff; /* Old browsers */
-  background: -moz-linear-gradient(top,  #00bfff 0%, #87ceeb 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top,  #00bfff 0%,#87ceeb 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom,  #00bfff 0%,#87ceeb 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00bfff', endColorstr='#87ceeb',GradientType=0 ); /* IE6-9 */
+  background: #000046; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #000046, #1cb5e0); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #000046, #1cb5e0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .info-wrapper {
@@ -18,4 +16,8 @@
   top: 30vh;
   margin-left: auto;
   margin-right: auto;
+}
+
+.scroll-space {
+  height: 1000px;
 }
