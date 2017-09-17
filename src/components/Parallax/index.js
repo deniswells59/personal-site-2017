@@ -26,12 +26,12 @@ class Parallax extends Component {
 
   handleScroll(e) {
     let scrollPos = window.scrollY;
-    this.setState({ top: scrollPos * this.props.scrollOffset });
+    this.setState({ top: scrollPos * this.props.scrollOffset * -0.5 });
   }
 
   generateStars() {
     let skyWidth  = window.innerWidth;
-    let skyHeight = window.innerHeight;
+    let skyHeight = window.innerHeight + window.innerHeight + window.innerHeight * .2;
 
     return this.createGrid(skyWidth, skyHeight);
   }
@@ -45,7 +45,7 @@ class Parallax extends Component {
     let rowHeight = height / numberOfRows;
 
     for(let i = 0; i <= numberOfRows; i++) {
-      let startPoint = rowHeight * -1;
+      let startPoint = rowHeight * -2;
       let top        = startPoint + rowHeight * i;
 
       let coords = {

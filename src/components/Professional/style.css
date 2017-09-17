@@ -34,3 +34,15 @@
 i.icons {
   margin: .5em;
 }
+
+hr {
+  width: 220px;
+  border-style: solid;
+  color: #fcfcfc;
+}
+
+p.title {
+  color: #fcfcfc;
+  letter-spacing: 1px;
+  font-family: 'Roboto';
+}

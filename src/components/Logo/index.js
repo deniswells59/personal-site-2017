@@ -25,7 +25,7 @@ class Logo extends Component {
           d="M10,10 c60,3 60,70 0,73 L10,8" />
         <path id='W-2'
           fill='none' stroke="#fcfcfc" strokeWidth="3" strokeMiterlimit="0"
-          d="M42.5,75.5 L45.3,83 L60,65 L74.7,83 L90,15" />
+          d="M42.5,76.5 L45.3,83 L60,65 L74.7,83 L90,15" />
 
           <animate xlinkHref='#D' attributeName='stroke-dashoffset' id="animateD"
             from='202.68' to='0' dur={`${this.state.halfDur}s`} begin={`${this.state.delayDur}s`} fill='freeze'

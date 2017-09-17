@@ -13,9 +13,24 @@ class Star extends Component {
     	opacity: this.props.opacity || '1',
     	fill   : this.props.fill || 'transparent',
     }
+
+    this.oscillate = this.oscillate.bind(this);
+  }
+
+  componentDidMount() {
+    // this.animation = setInterval(this.oscillate, 1000);
+    this.setState({ cap: this.state.left + 5 });
+  }
+
+  oscillate() {
+    console.log('yo');
+    if(this.state.left < this.state.cap) {
+      this.setState({ left: this.state.left++ });
+    }
   }
 
   render() {
+
     return (
       <svg width={ this.state.size }
            height={ this.state.size }
