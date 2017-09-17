@@ -11,13 +11,26 @@
   position: absolute;
   left: 0;
   right: 0;
-  width: 40%;
-  height: 50%;
-  top: 30vh;
+  top: 25vh;
   margin-left: auto;
   margin-right: auto;
+  z-index: 10;
+}
+
+.layer-wrapper {
+  z-index: 0;
 }
 
 .scroll-space {
   height: 1000px;
+}
+
+.social-links {
+  font-size: 3em;
+  color: #fcfcfc;
+  margin: 1em 0;
+}
+
+i.icons {
+  margin: .5em;
 }
