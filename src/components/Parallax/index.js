@@ -26,7 +26,7 @@ class Parallax extends Component {
 
   handleScroll(e) {
     let scrollPos = window.scrollY;
-    this.setState({ top: scrollPos * this.props.scrollOffset * -0.5 });
+    this.setState({ top: scrollPos * this.props.scrollOffset * -0.09 });
   }
 
   generateStars() {

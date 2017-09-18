@@ -22,13 +22,13 @@
 }
 
 .scroll-space {
-  height: 1000px;
+  height: 100vh;
 }
 
 .social-links {
   font-size: 3em;
   color: #fcfcfc;
-  margin: 1em 0;
+  margin: .6em 0;
 }
 
 i.icons {
@@ -36,7 +36,7 @@ i.icons {
 }
 
 hr {
-  width: 220px;
+  width: 120px;
   border-style: solid;
   color: #fcfcfc;
 }
@@ -45,4 +45,92 @@ p.title {
   color: #fcfcfc;
   letter-spacing: 1px;
   font-family: 'Roboto';
+  margin: 1.6em 0;
+}
+
+div.call-to-action {
+  color: #fcfcfc;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  bottom: 8vh;
+  z-index: 10;
+}
+
+p.cta-text {
+  font-size: .8em;
+  margin: .5em;
+}
+
+i.icon-arrow-down.icons {
+  font-size: 2em;
+  margin-top: 1em;
+  top: 1px;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}
+
+a.scroll-link, a.icon-href {
+  text-decoration: none;
+  color: #fcfcfc;
+}
+
+@-moz-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-18px);
+    transform: translateY(-18px);
+  }
+  60% {
+    -moz-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+@-webkit-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-18px);
+    transform: translateY(-18px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-18px);
+    -ms-transform: translateY(-18px);
+    -webkit-transform: translateY(-18px);
+    transform: translateY(-18px);
+  }
+  60% {
+    -moz-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+
+.bounce {
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
 }

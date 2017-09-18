@@ -6,7 +6,7 @@ class Nav extends Component {
   render() {
     return (
       <div className="Nav">
-      
+          WORK
       </div>
     );
   }
