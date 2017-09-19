@@ -11,3 +11,72 @@ ul.work-subnav li {
   margin: 1.5em 0;
   font-size: 1.5em;
 }
+
+.row.work-row {
+  padding: 7em 0;
+}
+
+ul.work-list {
+  padding: 0;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  list-style: none;
+}
+
+.work-list-item h3,
+.work-list-item h3 a {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  color: rgba(0, 0, 0, .87);
+}
+
+.work-list-item h3 a:hover {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.work-list-item.active h3 a {
+  color: #1cb5e0;
+}
+
+.work-list-item p,
+.work-list-item p a {
+  margin: 0;
+  color: rgb(177, 176, 176);
+  font-family: 'Dosis';
+}
+
+li.work-list-item {
+  margin: 4em 0;
+}
+
+.col-xs-12.col-lg-6.work-col.work-col-right {
+  padding: 0 5em;
+}
+
+.work-header {
+  text-align: center;
+}
+
+.work-img-wrapper {
+  position: relative;
+  height: 300px;
+}
+
+.work-img-wrapper div {
+  height: 250px;
+  width: 60%;
+  position: absolute;
+  background-position: 50% 50%;
+  background-size: cover;
+  box-shadow: 1px 1px 3px 0px rgba(28, 181, 224, 0.5);
+  border: 1px solid rgb(28, 181, 224);
+  border-radius: 3px;
+}
+
+.work-img-other {
+  bottom: 0;
+  right: 0;
+}

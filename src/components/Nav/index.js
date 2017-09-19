@@ -20,7 +20,6 @@ class Nav extends Component {
               className='nav-link'>
               { this.props.name }
             </a>
-            { this.props.children }
           </div>
         </div>
       </div>

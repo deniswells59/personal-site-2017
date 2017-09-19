@@ -61,12 +61,7 @@ class NavSite extends Component {
                 name='about' />
               <Nav
                 clickHandler={this.changeNav}
-                name='work'>
-                <ul className="dropdown">
-                  <li className="dropdown-item">Prime Table</li>
-                  <li className="dropdown-item">Market Tavern</li>
-                </ul>
-              </Nav>
+                name='work' />
               <Nav
                 clickHandler={this.changeNav}
                 name='contact'/>
