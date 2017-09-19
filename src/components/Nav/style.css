@@ -1,0 +1,28 @@
+.nav {
+  text-align: center;
+  font-family: 'Dosis', sans-serif;
+}
+
+.nav p {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 900;
+}
+
+a.nav-link {
+  color: rgba(0,0,0,.87);
+  -webkit-transition: all .2s ease-out;
+  -moz-transition: all .2s ease-out;
+  -o-transition: all .2s ease-out;
+  transition: all .2s ease-out;
+}
+
+a.nav-link:hover {
+  text-decoration: none;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+a.nav-link.active {
+  color: #1cb5e0;
+}
