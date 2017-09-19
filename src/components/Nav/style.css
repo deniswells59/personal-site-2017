@@ -15,6 +15,8 @@ a.nav-link {
   -moz-transition: all .2s ease-out;
   -o-transition: all .2s ease-out;
   transition: all .2s ease-out;
+  padding: 0 5em;
+  text-transform: uppercase;
 }
 
 a.nav-link:hover {
@@ -23,6 +25,27 @@ a.nav-link:hover {
   color: rgba(0, 0, 0, 0.5);
 }
 
+.nav-link-wrapper:hover ul.dropdown {
+  display: block;
+  cursor: pointer;
+}
+
 a.nav-link.active {
   color: #1cb5e0;
+}
+
+ul.dropdown {
+  display: none;
+  padding: 0;
+  list-style: none;
+  margin: 0;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  background-color: #fcfcfc;
+  width: 50%;
+  z-index: 1;
+  box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.3);
 }
