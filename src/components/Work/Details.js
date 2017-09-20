@@ -23,11 +23,12 @@ class Details extends Component {
               backgroundImage: `url('/assets/${this.props.site.fileName}/main.png')` }}
             ></div>
         </div>
+
         <div className="work-header">
-          <h2>
+          <h2 className='work-title'>
             { this.props.site.title }
           </h2>
-          <div className="social-links">
+          <div className="work-links">
             <a href={ this.props.site.links.github } className="work-href">
               <i className="icon-social-github icons"></i>
             </a>

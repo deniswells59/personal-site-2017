@@ -44,20 +44,31 @@ class Work extends Component {
       obj
     }
 
+    this.renderDetails = this.renderDetails.bind(this);
     this.changeSubNav = this.changeSubNav.bind(this);
   }
 
-  changeSubNav(e) {
+  renderDetails(e) {
     e.preventDefault();
     let el = e.target;
     let id = el.getAttribute('data-site');
 
-    this.setState({ currentWork: this.state.obj[id] }, this.renderSubNav);
+    this.setState({ currentWork: this.state.obj[id] }, this.changeSubNav);
   }
 
-  renderSubNav() {
-    // let subNav = this.state.currentWork;
-    // this.setState
+  changeSubNav() {
+    let className = 'work-list-item';
+    console.log(this.state.currentWork.fileName);
+    let newActive = document.getElementById( this.state.currentWork.fileName );
+    let links = document.getElementsByClassName(className);
+
+    for (var key in links) {
+      if (links.hasOwnProperty(key)) {
+        links[key].setAttribute('class', className);
+      }
+    }
+
+    newActive.setAttribute('class', `${className} active`);
   }
 
   render() {
@@ -65,24 +76,24 @@ class Work extends Component {
       <div className="row work-row">
         <div className="col-xs-12 col-lg-4 work-col work-col-left">
           <h2 className='work-title'>Look what I can do!</h2>
-          <p className='work-subtitle'>Click on these thingys to see all my projects</p>
+          <p className='work-subtitle'>Click on these thingys to see each of projects</p>
           <ul className='work-list'>
 
             <SubNav
                 active='true'
-                clickHandler={ this.changeSubNav }
+                clickHandler={ this.renderDetails }
                 initials='PT'
                 name='Prime Table'
                 url='primetablestk.com' />
 
             <SubNav
-                clickHandler={ this.changeSubNav }
+                clickHandler={ this.renderDetails }
                 initials='MT'
                 name='Market Tavern'
                 url='markettavernstk.com' />
 
             <SubNav
-                clickHandler={ this.changeSubNav }
+                clickHandler={ this.renderDetails }
                 initials='DW'
                 name='This Site'
                 url='deniswells.com' />

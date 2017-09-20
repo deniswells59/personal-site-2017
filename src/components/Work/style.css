@@ -13,7 +13,7 @@ ul.work-subnav li {
 }
 
 .row.work-row {
-  padding: 5em 0 3em;
+  padding: 3em 0 3em;
 }
 
 ul.work-list {
@@ -31,7 +31,9 @@ ul.work-list {
   color: rgba(0, 0, 0, .87);
 }
 
-.work-list-item h3 a:hover {
+.work-list-item h3 a:hover,
+.work-list-item h3 a:active,
+.work-list-item h3 a:focus {
   text-decoration: none;
   color: rgba(0, 0, 0, 0.5);
   cursor: pointer;
@@ -53,14 +55,10 @@ li.work-list-item {
 }
 
 .work-col.work-col-right {
-  padding: 3em 0 0;
+  padding: 8em 0 0;
 }
 .work-col.work-col-left {
   padding: 0 5em 0em 6em;
-}
-
-.work-header {
-  text-align: center;
 }
 
 .work-img-wrapper {
@@ -90,7 +88,7 @@ li.work-list-item {
   top: -40px;
 }
 
-p.work-desc {
+p.work-desc, div.work-header {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
@@ -101,10 +99,23 @@ h2.work-title {
   letter-spacing: 3px;
   text-transform: uppercase;
   margin: 0;
+  display: inline;
 }
 
 p.work-subtitle {
   margin: 0.2em 0.8em 0;
   font-family: 'Lato', sans-serif;
   color: #b5b1b0;
+}
+
+.work-links {
+  font-size: 2.8em;
+  margin: 0.4em 0px;
+}
+.work-links a {
+  color: #1cb5e0;
+}
+
+.work-links a i.icons {
+   margin: 0em .3em;
 }

@@ -9,12 +9,13 @@ class Details extends Component {
 
   render() {
     return (
-      <li className={ `work-list-item ${ this.props.active ? 'active' : '' }` }>
+      <li
+        id={ this.props.initials } 
+        className={ `work-list-item ${ this.props.active ? 'active' : '' }` }>
         <h3>
           <a
             onClick={ this.props.clickHandler }
-            data-site={ this.props.initials }
-            href=''>{ this.props.name }</a>
+            data-site={ this.props.initials }>{ this.props.name }</a>
 
         </h3>
         <p><a
