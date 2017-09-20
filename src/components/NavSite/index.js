@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 
 import Nav from '../Nav';
 import Work from '../Work';
@@ -13,8 +12,8 @@ class NavSite extends Component {
     this.state = {
       nav: 'work',
       navLib: {
-        'work': <Work />,
-        'about': <About />,
+        'work': <Work scrolledIn='false' />,
+      'about':  <About scrolledIn='true' />,
       }
     }
 

@@ -119,3 +119,6 @@ p.work-subtitle {
 .work-links a i.icons {
    margin: 0em .3em;
 }
+div.work-col.before-scroll {
+  opacity: 0;
+}
