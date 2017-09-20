@@ -13,7 +13,7 @@ ul.work-subnav li {
 }
 
 .row.work-row {
-  padding: 7em 0;
+  padding: 5em 0 3em;
 }
 
 ul.work-list {
@@ -52,8 +52,11 @@ li.work-list-item {
   margin: 4em 0;
 }
 
-.col-xs-12.col-lg-6.work-col.work-col-right {
-  padding: 0 5em;
+.work-col.work-col-right {
+  padding: 3em 0 0;
+}
+.work-col.work-col-left {
+  padding: 0 5em 0em 6em;
 }
 
 .work-header {
@@ -63,20 +66,45 @@ li.work-list-item {
 .work-img-wrapper {
   position: relative;
   height: 300px;
+  margin-bottom: 4em;
 }
 
 .work-img-wrapper div {
-  height: 250px;
-  width: 60%;
+  height: 290px;
+  width: 50%;
   position: absolute;
   background-position: 50% 50%;
   background-size: cover;
-  box-shadow: 1px 1px 3px 0px rgba(28, 181, 224, 0.5);
+  box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.5);
   border: 1px solid rgb(28, 181, 224);
-  border-radius: 3px;
+  border-radius: 2px;
 }
 
 .work-img-other {
-  bottom: 0;
-  right: 0;
+  bottom: -10%;
+  right: 10%;
+}
+
+.work-img-main {
+  left: 0px;
+  top: -40px;
+}
+
+p.work-desc {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h2.work-title {
+  font-family: 'Dosis', sans-serif;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+p.work-subtitle {
+  margin: 0.2em 0.8em 0;
+  font-family: 'Lato', sans-serif;
+  color: #b5b1b0;
 }

@@ -67,10 +67,13 @@ class NavSite extends Component {
                 name='contact'/>
 
           </div>
-
-          { this.state.navLib[this.state.nav] }
-
         </div>
+
+        <div className="container-fluid">
+          { this.state.navLib[this.state.nav] }
+        </div>
+
+
       </div>
     );
   }

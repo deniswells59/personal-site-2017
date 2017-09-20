@@ -23,7 +23,6 @@ class Star extends Component {
   }
 
   oscillate() {
-    console.log('yo');
     if(this.state.left < this.state.cap) {
       this.setState({ left: this.state.left++ });
     }

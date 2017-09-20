@@ -5,6 +5,7 @@ class Details extends Component {
   constructor(props) {
     super(props);
 
+    this.state = this.props.site;
   }
 
   render() {

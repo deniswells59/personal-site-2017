@@ -11,12 +11,6 @@ class Professional extends Component {
 
   }
 
-  componentDidMount() {
-    let scroll = new SmoothScroll('a[href*="#"]', {
-      speed: 1500,
-    });
-  }
-
   render() {
     return (
       <div className="Professional">
