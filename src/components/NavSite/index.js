@@ -55,15 +55,15 @@ class NavSite extends Component {
 
           <div className="row">
 
-              <Nav
-                clickHandler={this.changeNav}
-                name='about' />
-              <Nav
-                clickHandler={this.changeNav}
-                name='work' />
-              <Nav
-                clickHandler={this.changeNav}
-                name='contact'/>
+            <Nav
+              clickHandler={this.changeNav}
+              name='about' />
+            <Nav
+              clickHandler={this.changeNav}
+              name='work' />
+            <Nav
+              clickHandler={this.changeNav}
+              name='contact' />
 
           </div>
         </div>

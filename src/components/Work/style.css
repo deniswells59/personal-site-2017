@@ -119,6 +119,13 @@ p.work-subtitle {
 .work-links a i.icons {
    margin: 0em .3em;
 }
+
 div.work-col.before-scroll {
   opacity: 0;
+}
+div.work-col, div.work-col-right {
+  animation-duration: .4s;
+  -webkit-animation-duration: .4s;
+  -moz-animation-duration: .4s;
+  -o-animation-duration: .4s;
 }

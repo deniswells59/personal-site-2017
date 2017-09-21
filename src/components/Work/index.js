@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { addClass, removeClass, asyncLoop } from '../../common';
 import './style.css';
 
 import SubNav from './SubNav';
@@ -9,6 +9,7 @@ class Work extends Component {
   constructor(props) {
     super(props);
 
+    // Project Constants + Also File System for Images :P
     let PROJECTS = {
       PT: 'PT',
       MT: 'MT',
@@ -16,19 +17,20 @@ class Work extends Component {
     }
 
     this.state = {
-      scrolledIn: false,
-      currentWork: PROJECTS.PT,
-      projects: PROJECTS,
+      scrolledIn : false,       // Watches for scroll Animation
+      currentWork: PROJECTS.PT, // Sets initial Project
+      projects   : PROJECTS,
     }
 
     this.renderDetails = this.renderDetails.bind(this);
-    this.changeSubNav = this.changeSubNav.bind(this);
+    this.changeSubNav  = this.changeSubNav.bind(this);
 
-    this.scrollCheck = this.scrollCheck.bind(this);
-    this.showWork = this.showWork.bind(this);
+    this.scrollCheck   = this.scrollCheck.bind(this);
+    this.swapWorkClass = this.swapWorkClass.bind(this);
   }
 
   componentDidMount() {
+    // Init scroll animation event
     this.scrollCheck();
     document.addEventListener('scroll', this.scrollCheck);
   }
@@ -38,39 +40,50 @@ class Work extends Component {
   }
 
   scrollCheck() {
-    let el = document.getElementById('scroll-trigger');
-    let elemBottom = el.getBoundingClientRect().bottom;
+    let el = document.getElementById('scroll-trigger'); // Div
+    let elemBottom = el.getBoundingClientRect().bottom; // Bottom on div
 
-    let isVisible = elemBottom <= window.innerHeight;
+    let isVisible = elemBottom <= window.innerHeight; // Once Bottom is viewable
 
     if(isVisible) {
-      this.showWork();
-      this.cleanUpScroll();
+      this.cleanUpScroll(); // Kill the event
+      // Wait until the pics load
+      this.loadPicsThenShow(() => {
+        this.swapWorkClass('work-col', 'hide', 'animated fadeIn'); // Then show em!
+      });
     }
   }
 
-  showWork() {
-    let divs = document.getElementsByClassName('work-col');
+  loadPicsThenShow(cb) { // Waits for Pics to load
+    let imagesSources = [
+      `/assets/${this.state.currentWork}/main.png`,
+      `/assets/${this.state.currentWork}/other.png`
+    ];
+
+    asyncLoop({ // We gotta do it async
+      length : 2,
+      functionToLoop : (loop, i) => {
+        var myImage = new Image();
+        myImage.src = imagesSources[i];
+        myImage.onload = loop;
+      },
+      callback: cb,
+    });
+  }
+
+  swapWorkClass(elClass, toRemove, toAdd) {
+    let divs = document.getElementsByClassName(elClass); // Find the divs
+
+    // Loop them
     for(let key in divs) {
       if (divs.hasOwnProperty(key)) {
-        this.swapClass(divs[key]);
+        removeClass(divs[key], toRemove); // remove some classes
+        addClass(divs[key], toAdd);       // add some classes
       }
     }
   }
 
-  swapClass(el) {
-    let oldClass = el.getAttribute('class');
-    let arr = oldClass.split(' ');
-    let indexToRemove = arr.indexOf('before-scroll');
-
-    arr.splice(indexToRemove, 1);
-    arr.push('animated fadeIn');
-
-    let newClass = arr.join(' ');
-    el.setAttribute('class', newClass);
-  }
-
-  cleanUpScroll() {
+  cleanUpScroll() { // Kill the events!
     this.setState({ scrolledIn: true });
     document.removeEventListener('scroll', this.scrollCheck);
   }
@@ -80,9 +93,17 @@ class Work extends Component {
     let el = e.target;
     let id = el.getAttribute('data-site');
 
-    this.setState({ currentWork: this.state.projects[id] }, this.changeSubNav);
-  }
+    this.swapWorkClass('work-col-right', 'fadeIn', 'fadeOut');// Hide the old stuff
 
+    setTimeout(() => { // Wait for animation
+      this.setState({ currentWork: this.state.projects[id] }, () => { // CHANGE!
+        this.changeSubNav();          // Change the nav bar!
+        this.loadPicsThenShow(() => { // Load the Pics!
+          this.swapWorkClass('work-col-right', 'fadeOut', 'fadeIn'); // Show it!
+        });
+      });
+    }, 400);
+  }
 
   changeSubNav() {
     let className = 'work-list-item';
@@ -91,11 +112,11 @@ class Work extends Component {
 
     for (var key in links) {
       if (links.hasOwnProperty(key)) {
-        links[key].setAttribute('class', className);
+        removeClass(links[key], 'active');
       }
     }
 
-    newActive.setAttribute('class', `${className} active`);
+    addClass(newActive, 'active');
   }
 
   render() {

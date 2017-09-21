@@ -12,29 +12,34 @@ class Details extends Component {
     }
   }
 
-  componentDidMount() {
-    console.log(logThis);
-  }
-
   render() {
     let detail;
-    if(this.props.current === 'PT') {
-      detail =
-      <DetailList
-        title='Prime Table'
-        github='http://github.com'
-        link='http://primetablestk.com'
-        description='Lorem ipsum'
-        fileName='PT'/>;
-    } else {
-      detail =
-      <DetailList
-        title='Market Tavern'
-        github='http://github.com'
-        link='http://primetablestk.com'
-        description='Lorem ipsum'
-        fileName='MT'/>;
-    }
+    switch(this.props.current) {
+      case 'PT':
+        detail = <DetailList
+                    title='Prime Table'
+                    github='http://github.com'
+                    link='http://primetablestk.com'
+                    description='Lorem ipsum'
+                    fileName='PT'/>;
+        break;
+      case 'MT':
+      detail = <DetailList
+                  title='Market Tavern'
+                  github='http://github.com'
+                  link='http://primetablestk.com'
+                  description='Lorem ipsum'
+                  fileName='MT'/>;
+      break;
+      case 'DW':
+        detail = <DetailList
+                    title='This Site'
+                    github='http://github.com'
+                    link='http://primetablestk.com'
+                    description='Lorem ipsum'
+                    fileName='DW'/>;
+        break;
+      }
 
     return (
       <div>
