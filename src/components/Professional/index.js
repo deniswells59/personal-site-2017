@@ -17,7 +17,7 @@ class Professional extends Component {
 
         <div className="header">
 
-          <div className="info-wrapper" id="info">
+          <div className="info-wrapper animated fadeIn" id="info">
 
             <Logo size="100" dur="2" delay=".5" backgroundColor="transparent" />
 
@@ -32,14 +32,14 @@ class Professional extends Component {
               <a href="#" className="icon-href">
                 <i className="icon-social-linkedin icons"></i>
               </a>
-              <a href="#" className="icon-href">
+              <a href="https://twitter.com/deniswells59" className="icon-href">
                 <i className="icon-social-twitter icons"></i>
               </a>
             </div>
 
           </div>
 
-          <div className="call-to-action">
+          <div className="call-to-action animated fadeIn animated-delay">
             <p className="cta-text">THERE'S PROOF DOWN HERE</p>
             <a data-scroll href="#site" className='scroll-link'>
               <i className="icon-arrow-down icons bounce"></i>

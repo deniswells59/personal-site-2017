@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import Star from '../Star';
 import './style.css';
 
@@ -38,8 +37,8 @@ class Parallax extends Component {
 
   createGrid(width, height) {
     let starsToReturn = [];
-    let numberOfCols  = Math.floor(width  / 100);
-    let numberOfRows  = Math.floor(height / 100);
+    let numberOfCols  = Math.floor(width  / 140);
+    let numberOfRows  = Math.floor(height / 140);
 
     let colWidth  = width  / numberOfCols;
     let rowHeight = height / numberOfRows;

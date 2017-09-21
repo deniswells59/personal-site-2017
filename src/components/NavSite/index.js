@@ -13,7 +13,7 @@ class NavSite extends Component {
       nav: 'work',
       navLib: {
         'work': <Work scrolledIn='false' />,
-      'about':  <About scrolledIn='true' />,
+       'about': <About scrolledIn='true' />,
       }
     }
 
@@ -33,6 +33,7 @@ class NavSite extends Component {
   changeNav(e) {
     let el = e.target;
     let id = el.getAttribute('id');
+
     this.setState({ nav: id }, this.renderNav);
   }
 
@@ -68,7 +69,7 @@ class NavSite extends Component {
           </div>
         </div>
 
-        <div className="container-fluid">
+        <div id='view-box' className='container-fluid'>
           { this.state.navLib[this.state.nav] }
         </div>
 

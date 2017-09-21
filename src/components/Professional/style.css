@@ -140,3 +140,10 @@ a.scroll-link, a.icon-href {
 div#site {
   padding: 2em 0px;
 }
+
+.animated-delay {
+  animation-delay: 1s;
+  -webkit-animation-delay: 1s;
+  -o-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+}
