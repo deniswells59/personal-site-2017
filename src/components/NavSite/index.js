@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Nav from '../Nav';
 import Work from '../Work';
 import About from '../About';
+import Contact from '../Contact';
 import './style.css';
 
 class NavSite extends Component {
@@ -14,6 +15,7 @@ class NavSite extends Component {
       navLib: {
         'work': <Work scrolledIn='false' />,
        'about': <About scrolledIn='true' />,
+       'contact': <Contact scrolledIn='true' />,
       }
     }
 
