@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { addClass, removeClass, asyncLoop } from '../../common';
+import { addClass, removeClass, asyncLoop } from '../../../../../../common';
 import './style.css';
 
-import SubNav from './SubNav';
-import Details from './Details';
+import SubNav from './components/SubNav';
+import Details from './components/Details';
 
 class Work extends Component {
   constructor(props) {

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 
 class Details extends Component {
   constructor(props) {
@@ -10,7 +9,7 @@ class Details extends Component {
   render() {
     return (
       <li
-        id={ this.props.initials } 
+        id={ this.props.initials }
         className={ `work-list-item ${ this.props.active ? 'active' : '' }` }>
         <h3>
           <a

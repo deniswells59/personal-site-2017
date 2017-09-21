@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { logThis } from '../../common';
+import { logThis } from '../../../../../../../../common';
 
-import DetailList from './DetailList';
+import DetailList from '../DetailList';
 
 class Details extends Component {
   constructor(props) {

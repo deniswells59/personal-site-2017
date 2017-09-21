@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Star from '../Star';
+import Star from './components/Star/';
 import './style.css';
 
 class Parallax extends Component {

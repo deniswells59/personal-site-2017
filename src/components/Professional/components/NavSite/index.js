@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
-import Nav from '../Nav';
-import Work from '../Work';
-import About from '../About';
-import Contact from '../Contact';
+import Nav from './components/Nav';
+import Work from './components/Work';
+import About from './components/About';
+import Contact from './components/Contact';
 import './style.css';
 
 class NavSite extends Component {

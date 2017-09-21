@@ -1,0 +1,28 @@
+.contact-section {
+  text-align: center;
+  padding: 6em 0;
+}
+
+.contact-section h2 {
+  font-family: 'Dosis', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 2em;
+}
+
+.contact-section form {
+  width: 80%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-section form * {
+  width: 100%;
+  display: block;
+  margin-bottom: 2em;
+  font-family: 'Lato', sans-serif;
+  border-radius: 2px;
+  border: 1px solid #c0bebe;
+  padding: .4em;
+}
