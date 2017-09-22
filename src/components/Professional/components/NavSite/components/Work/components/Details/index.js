@@ -6,9 +6,6 @@ class Details extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      projects: this.props.projects
-    }
   }
 
   render() {

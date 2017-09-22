@@ -1,0 +1,18 @@
+@media (max-width: 1199px) {
+  ul.work-list {
+    display: none;
+  }
+
+  .work-img-wrapper {
+    width: 90vw;
+    margin-left: auto;
+  }
+
+  p.work-desc {
+    margin-bottom: 8em;
+  }
+
+  .nav-link-wrapper a {
+    padding: 0;
+  }
+}

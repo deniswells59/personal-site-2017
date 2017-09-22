@@ -119,6 +119,18 @@ class Work extends Component {
   }
 
   render() {
+    let deets = <Details
+                  {...this.props}
+                  current={ this.state.currentWork } />;
+    if(window.innerWidth <= 1200) {
+      let work = Object.keys(this.state.projects);
+      deets = work.map((i, idx) => {
+        return <Details
+                  key={idx}
+                  {...this.props}
+                  current={ i } />;
+      });
+    }
     return (
       <div className='row work-row'>
         <div
@@ -152,10 +164,7 @@ class Work extends Component {
 
         <div
           className='col-xs-12 col-lg-8 work-col work-col-right before-scroll'>
-          <Details
-            {...this.props}
-            current={ this.state.currentWork }
-            projects={ this.state.projects }/>
+          { deets }
         </div>
 
       </div>
