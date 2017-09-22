@@ -42,3 +42,16 @@ let reduceDupes = (arr) => {
   return arr;
 }
 exports.reduceDupes = reduceDupes;
+
+exports.sendMail = (data) => {
+  let json = JSON.stringify(data);
+
+  return fetch('/api/send', {
+    method: 'post',
+    body: json,
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+  });
+}

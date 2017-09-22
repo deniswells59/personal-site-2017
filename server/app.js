@@ -31,7 +31,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, '../public')));
 
-
+app.use('/api', require('./api.js'))
 app.use('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../public/index.html'))
 });

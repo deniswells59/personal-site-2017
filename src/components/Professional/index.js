@@ -9,7 +9,6 @@ class Professional extends Component {
 
   constructor(props) {
     super(props);
-
   }
 
   render() {
@@ -18,8 +17,8 @@ class Professional extends Component {
 
         <Header />
 
-        <NavSite />
-        
+        <NavSite {...this.props}/>
+
       </div>
     );
   }

@@ -11,32 +11,22 @@ class NavSite extends Component {
     super(props);
 
     this.state = {
-      nav: 'work',
-      navLib: {
-        'work': <Work scrolledIn='false' />,
-       'about': <About scrolledIn='true' />,
-       'contact': <Contact scrolledIn='true' />,
-      }
+      nav: 'work'
     }
 
-    this.renderNav = this.renderNav.bind(this);
     this.changeNav = this.changeNav.bind(this);
   }
 
   componentDidMount() {
-    this.renderNav();
-  }
-
-  renderNav() {
-    let nav = this.state.nav;
-    this.setState({ navEl: this.state.navLib[nav] }, this.setActive);
+    this.setActive();
+    this.setState({ common: this.props.common });
   }
 
   changeNav(e) {
     let el = e.target;
     let id = el.getAttribute('id');
 
-    this.setState({ nav: id }, this.renderNav);
+    this.setState({ nav: id }, this.setActive);
   }
 
   setActive() {
@@ -52,6 +42,19 @@ class NavSite extends Component {
   }
 
   render() {
+    let current;
+    switch(this.state.nav) {
+      case 'work':
+        current = <Work scrolledIn='false' {...this.props}/>;
+        break;
+      case 'about':
+        current = <About scrolledIn='true' />;
+        break;
+      case 'contact':
+        current = <Contact scrolledIn='true' {...this.props}/>;
+        break;
+    }
+
     return (
       <div id='site' className="scroll-space">
         <div className="container">
@@ -72,7 +75,7 @@ class NavSite extends Component {
         </div>
 
         <div id='view-box' className='container-fluid'>
-          { this.state.navLib[this.state.nav] }
+          { current }
         </div>
 
 

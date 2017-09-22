@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { addClass, removeClass, asyncLoop } from '../../../../../../common';
 import './style.css';
 
 import SubNav from './components/SubNav';
@@ -60,7 +59,7 @@ class Work extends Component {
       `/assets/${this.state.currentWork}/other.png`
     ];
 
-    asyncLoop({ // We gotta do it async
+    this.props.asyncLoop({ // We gotta do it async
       length : 2,
       functionToLoop : (loop, i) => {
         var myImage = new Image();
@@ -77,8 +76,8 @@ class Work extends Component {
     // Loop them
     for(let key in divs) {
       if (divs.hasOwnProperty(key)) {
-        removeClass(divs[key], toRemove); // remove some classes
-        addClass(divs[key], toAdd);       // add some classes
+        this.props.removeClass(divs[key], toRemove); // remove some classes
+        this.props.addClass(divs[key], toAdd);       // add some classes
       }
     }
   }
@@ -112,11 +111,11 @@ class Work extends Component {
 
     for (var key in links) {
       if (links.hasOwnProperty(key)) {
-        removeClass(links[key], 'active');
+        this.props.removeClass(links[key], 'active');
       }
     }
 
-    addClass(newActive, 'active');
+    this.props.addClass(newActive, 'active');
   }
 
   render() {
@@ -154,6 +153,7 @@ class Work extends Component {
         <div
           className='col-xs-12 col-lg-8 work-col work-col-right before-scroll'>
           <Details
+            {...this.props}
             current={ this.state.currentWork }
             projects={ this.state.projects }/>
         </div>

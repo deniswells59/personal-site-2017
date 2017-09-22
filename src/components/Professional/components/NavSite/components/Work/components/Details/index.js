@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { logThis } from '../../../../../../../../common';
 
 import DetailList from '../DetailList';
 

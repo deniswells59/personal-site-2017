@@ -8,6 +8,7 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 2em;
+  margin-bottom: 2em;
 }
 
 .contact-section form {
@@ -25,4 +26,12 @@
   border-radius: 2px;
   border: 1px solid #c0bebe;
   padding: .4em;
+}
+
+.contact-section form input[type="submit"] {
+  background-color: #1cb5e0;
+  color: #fcfcfc;
+  border: 0px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }

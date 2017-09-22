@@ -14,7 +14,7 @@ class About extends Component {
             </p>
             <p>
               That next year, in 2016, I moved to the Bay Area, learned as much as I could from peers, professionals, and failed job interviews and came back home.
-              Now, I am an employed Web Developer. I also run my own freelance business on the side. Whether you need a full web app, a static website, or you just
+              Now, I am an employed Web Developer. I also run my own freelance gigs on the side. Whether you need a full web app, a static website, or you just
               want me to throw a Wordpress site together, I wanna work with you.
             </p>
             <br />

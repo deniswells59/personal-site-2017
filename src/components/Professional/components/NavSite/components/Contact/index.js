@@ -10,9 +10,11 @@ class Contact extends Component {
       email: '',
       phone: '',
       message: '',
+      messageSent: false
     }
 
     this.handleUserInput = this.handleUserInput.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleUserInput (e) {
@@ -22,13 +24,41 @@ class Contact extends Component {
     this.setState({ [name]: value });
   }
 
+  handleSubmit(e) {
+    e.preventDefault();
+    let data = {
+      name: this.state.name,
+      email: this.state.email,
+      phone: this.state.phone,
+      message: this.state.message,
+    }
+
+    let valid = this.validateForm(data);
+    this.props.sendMail(data)
+      .then(res => {
+        console.log('RES', res);
+      })
+  }
+
+  validateForm(data) {
+    let valid = true;
+    for(let key in data) {
+      if (data.hasOwnProperty(key)) {
+        if(key !== 'phone' && !data[key] && data[key].length <= 0) {
+          valid = false;
+        }
+      }
+    }
+    return valid;
+  }
+
   render() {
     return (
-      <div className='contact-section'>
+      <div className='contact-section animated fadeIn'>
         <h2>
           Ask about a project! &nbsp; Get to know me! &nbsp; Send me spam!
         </h2>
-        <form>
+        <form onSubmit={ this.handleSubmit }>
           <input
             value={ this.state.name }
             name='name'
@@ -55,12 +85,14 @@ class Contact extends Component {
             value={ this.state.message }
             name='message'
             placeholder='message'
+            onChange={ (e) => this.handleUserInput(e) }
             rows='5'
             maxLength='1000'></textarea>
 
           <input
+            disabled={this.state.messageSent}
             type='submit'
-            value='submit'/>
+            value='send'/>
         </form>
       </div>
     );
