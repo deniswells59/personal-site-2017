@@ -15,7 +15,7 @@ class Professional extends Component {
     return (
       <div className="Professional">
 
-        <Header />
+        <Header {...this.props}/>
 
         <NavSite {...this.props}/>
 

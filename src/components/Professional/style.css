@@ -137,10 +137,6 @@ a.scroll-link, a.icon-href {
   animation: bounce 2s infinite;
 }
 
-div#site {
-  padding: 2em 0px;
-}
-
 .animated-delay {
   animation-delay: 1.2s;
   -webkit-animation-delay: 1.2s;

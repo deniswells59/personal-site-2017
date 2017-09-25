@@ -10,6 +10,20 @@ class Header extends Component {
 
   }
 
+  componentDidMount() {
+    let arrow = document.querySelector('.icon-arrow-down');
+    arrow.addEventListener('click', this.scrollDown);
+  }
+
+  componentWillUnmount() {
+    let arrow = document.querySelector('.icon-arrow-down');
+    arrow.removeEventListener('click', this.scrollDown);
+  }
+
+  scrollDown(e) {
+    e.preventDefault();
+  }
+
   render() {
     return (
       <div className="header">
@@ -44,9 +58,9 @@ class Header extends Component {
         </div>
         <div className="layer-wrapper">
 
-          <Parallax opacity='0.3' scrollOffset='0.55' size='20'/>
-          <Parallax opacity='0.6' scrollOffset='0.65' size='30'/>
-          <Parallax opacity='0.8' scrollOffset='1.00' size='35'/>
+          <Parallax {...this.props} opacity='0.3' scrollOffset='0.55' size='20'/>
+          <Parallax {...this.props} opacity='0.6' scrollOffset='0.65' size='30'/>
+          <Parallax {...this.props} opacity='0.8' scrollOffset='1.00' size='35'/>
 
         </div>
 
