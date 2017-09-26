@@ -1,0 +1,23 @@
+button {
+  -webkit-appearance: inherit;
+  margin: 1em 0;
+  font-family: serif;
+  width: 50%;
+}
+
+h2.fantasy {
+  font-family: 'Comic';
+  color: white;
+  text-decoration: underline;
+  letter-spacing: 2px;
+  font-size: 1.5em;
+}
+
+.nav-old {
+  text-align: center;
+}
+
+.nav-old ul {
+ list-style: none;
+ padding: 0;
+}

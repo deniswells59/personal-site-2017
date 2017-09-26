@@ -1,23 +1,4 @@
-.Personal {
-  background-image: url('/assets/sky.gif');
-  background-size: 250px auto;
-  width: 100vw;
-  height: 100vh;
-  padding: 2em 0;
-}
-
-.container {
-  border: 4px solid #fff;
-  height: 80vh;
-  border-style: groove;
-}
-
-.title {
-  text-align: center;
-}
-
-.title h1 {
-  color: #fff;
-  font-family: serif;
-  margin: 1em 0;
+@font-face {
+  font-family: 'Comic';
+  src: url(/fonts/ComicRelief.ttf);
 }
