@@ -1,0 +1,25 @@
+.detail-wrapper img {
+   width: 350px;
+}
+h2.work-personal-title {
+  font-family: monospace;
+  color: dodgerblue;
+  font-size: 1.95em;
+  background-color: black;
+  text-align: center;
+  margin-top: 3em;
+}
+.detail-wrapper img,
+.detail-wrapper p {
+  display: inline;
+}
+.detail-wrapper p {
+  color: #fff;
+  font-family: monospace;
+}
+.personal-links * {
+  display: block;
+  margin: 1em 0;
+  color: #fff;
+  text-decoration: underline;
+}

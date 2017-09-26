@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Header from './components/Header';
 import Nav from './components/Nav';
 import Work from './components/Work';
+import About from './components/About';
+import Contact from './components/Contact';
 
 import './style.css';
 
@@ -39,6 +41,12 @@ class Personal extends Component {
                   </div>
                   <div className="col-xs-12 -section">
                     <Work />
+                  </div>
+                  <div className="col-xs-12 -section">
+                    <About />
+                  </div>
+                  <div className="col-xs-12 -section">
+                    <Contact />
                   </div>
                 </div>
               </div>

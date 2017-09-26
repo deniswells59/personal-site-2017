@@ -8,16 +8,32 @@ class Nav extends Component {
         <h2 className='fantasy'>Navigation:</h2>
         <ul>
           <li>
-            <button>Home</button>
+            <a href="#home">
+              <button>
+                Home
+              </button>
+            </a>
           </li>
           <li>
-            <button>Work</button>
+            <a href="#work">
+              <button>
+                Work
+              </button>
+            </a>
           </li>
           <li>
-            <button>About</button>
+            <a href="#about">
+              <button>
+                About
+              </button>
+            </a>
           </li>
           <li>
-            <button>Contact</button>
+            <a href="#contact">
+              <button>
+                Contact
+              </button>
+            </a>
           </li>
         </ul>
       </div>

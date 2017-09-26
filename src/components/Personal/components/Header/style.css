@@ -16,7 +16,7 @@
 .title {
   text-align: center;
 }
-.title h1, h2.title {
+.title h1, .title h2, h2.title, h1.title {
   color: yellow;
   font-family: 'Comic';
   font-size: 2em;
