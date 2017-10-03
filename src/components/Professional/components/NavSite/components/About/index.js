@@ -8,13 +8,13 @@ class About extends Component {
         <div className='col-xs-12'>
           <div className='about-text-wrapper'>
             <p>
-              Hello. My name is Denis Wells and I am a Full Stack Web Developer. I first started to learn to code in 2014. A year later, I saw the
-              show 'Mr. Robot' and decided, "Yeah, that's what I wanna do!" Then, a few months later, I started watching 'Silicon Valley' and was like,
+              Hello. My name is Denis Wells and I am a Full Stack Web Developer. I first started to coding in 2013. A year later, I saw the
+              show 'Mr. Robot' and decided, "Yeah, I'll quit my job! That's what I wanna do!" Then, a few months later, I started watching 'Silicon Valley' and was like,
               "Yeah, okay. I'll do that."
             </p>
             <p>
-              That next year, in 2016, I moved to the Bay Area, learned as much as I could from peers, professionals, and failed job interviews and came back home.
-              Now, I am an employed Web Developer. I also run my own freelance gigs on the side. Whether you need a full web app, a static website, or you just
+              That next year, in 2016, I left my job at Costco, moved to the Bay Area, learned as much as I could from peers, professionals, and failed job interviews and came back home.
+              Now, I am an employed Web Developer. I also run my own freelance gig on the side. Whether you need a full web app, a static website, or you just
               want me to throw a Wordpress site together, I wanna work with you.
             </p>
             <br />

@@ -37,13 +37,13 @@ class Header extends Component {
 
           <hr/>
           <div className="social-links">
-            <a href="#" className="icon-href">
+            <a href="https://github.com/deniswells59" target="_blank" className="icon-href">
               <i className="icon-social-github icons"></i>
             </a>
-            <a href="#" className="icon-href">
+            <a href="https://www.linkedin.com/in/denis-wells-426726119/" target="_blank" className="icon-href">
               <i className="icon-social-linkedin icons"></i>
             </a>
-            <a href="https://twitter.com/deniswells59" className="icon-href">
+            <a href="https://twitter.com/deniswells59" target="_blank" className="icon-href">
               <i className="icon-social-twitter icons"></i>
             </a>
           </div>

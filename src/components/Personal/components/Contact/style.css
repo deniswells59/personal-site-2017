@@ -1,0 +1,9 @@
+form.old-form * {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+form.old-form label {
+    color: #fff;
+    margin: 1px;
+}

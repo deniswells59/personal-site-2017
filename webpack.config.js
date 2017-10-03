@@ -1,10 +1,10 @@
-let webpack = require('webpack');
-let path = require('path');
+var webpack = require('webpack');
+var path = require('path');
 
-let BUILD_DIR = path.resolve(__dirname, 'public/build/');
-let APP_DIR = path.resolve(__dirname, 'src/');
+var BUILD_DIR = path.resolve(__dirname, 'public/build/');
+var APP_DIR = path.resolve(__dirname, 'src/');
 
-let config = {
+var config = {
   entry: {
     main: [
       'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000&reload=true',

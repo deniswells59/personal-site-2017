@@ -14,7 +14,12 @@ ReactDOM.render((
   <BrowserRouter>
     <div>
       <Route exact path="/" component={ App } />
-      <Route path="/personal" component={ Personal } />
+      <Route path="/personal" render={() => {
+        return <Personal
+                  addClass={ addClass }
+                  removeClass={ removeClass }
+                  sendMail={ sendMail } />
+        }} />
       <Route path="/professional" render={() => {
         return <Professional
                   addClass={ addClass }

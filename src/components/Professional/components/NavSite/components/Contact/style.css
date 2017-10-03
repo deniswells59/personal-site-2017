@@ -35,3 +35,7 @@
   letter-spacing: 1px;
   text-transform: uppercase;
 }
+
+input[disabled] {
+  opacity: .5;
+}

@@ -46,7 +46,7 @@ class Personal extends Component {
                     <About />
                   </div>
                   <div className="col-xs-12 -section">
-                    <Contact />
+                    <Contact { ...this.props }/>
                   </div>
                 </div>
               </div>

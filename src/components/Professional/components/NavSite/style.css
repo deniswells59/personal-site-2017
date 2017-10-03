@@ -8,6 +8,10 @@
     margin-left: auto;
   }
 
+  p.work-subtitle {
+    display: none;
+  }
+  
   p.work-desc {
     margin-bottom: 8em;
   }

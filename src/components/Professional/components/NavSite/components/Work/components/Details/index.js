@@ -14,25 +14,25 @@ class Details extends Component {
       case 'PT':
         detail = <DetailList
                     title='Prime Table'
-                    github='http://github.com'
+                    github='https://github.com/deniswells59/PrimeTable'
                     link='http://primetablestk.com'
-                    description='Lorem ipsum'
+                    description="I made this. It was my first time getting paid to design something. I went for something dark and sophisticated and modern. So, check it out. I used jQuery and (full disclosure) a little bit of an HTML template that I bought for $14."
                     fileName='PT'/>;
         break;
       case 'MT':
       detail = <DetailList
                   title='Market Tavern'
-                  github='http://github.com'
-                  link='http://primetablestk.com'
-                  description='Lorem ipsum'
+                  github='https://github.com/deniswells59/MarketTavern'
+                  link='https://marketavernstk.com'
+                  description="My Prime Table website was so successful, the owners asked me to redesign their other site. This is also where my girlfriend works so I really had to put in the work. I decided to have a little respect for the tech on this one. I used Webpack to bundle and Babel to compile my front end code. So there's some ES6 in there because that's what I like! And jQuery because smooth scrolling sucks without it."
                   fileName='MT'/>;
       break;
       case 'DW':
         detail = <DetailList
                     title='This Site'
-                    github='http://github.com'
-                    link='http://primetablestk.com'
-                    description='Lorem ipsum'
+                    github='https://github.com/deniswells59/personal-site-2017'
+                    link='http://deniswells.com'
+                    description='React, Webpack, Node + Express backend because I can. Explore, my dude.'
                     fileName='DW'/>;
         break;
       }
