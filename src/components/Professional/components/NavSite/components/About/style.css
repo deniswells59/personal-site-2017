@@ -3,7 +3,7 @@
   width: 65%;
   margin-left: auto;
   margin-right: auto;
-  padding: 12em 0;
+  padding: 2em 0;
   font-family: 'Lato', sans-serif;
   font-size: 1.1em;
   letter-spacing: .01em;
@@ -22,4 +22,15 @@
   font-size: 1.5em;
   position: absolute;
   left: -35px;
+}
+.img-wrapper {
+  text-align: center;
+  margin-top: 2em;
+}
+
+.img-wrapper img {
+  box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.5);
+  border: 2px solid rgb(28, 181, 224);
+  border-radius: 2px;
+  max-width: 300px;
 }

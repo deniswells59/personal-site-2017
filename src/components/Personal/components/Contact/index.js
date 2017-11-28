@@ -13,7 +13,7 @@ class Contact extends Component {
       phone: '',
       message: '',
       messageSent: false,
-      status: 'send'
+      status: 'Send'
     }
 
     this.handleUserInput = this.handleUserInput.bind(this);
@@ -37,9 +37,7 @@ class Contact extends Component {
       message: this.state.message,
     }
 
-    // TESTING ONLY /////
     if(!data.gresponse) data.gresponse = 'yo';
-    // TESTING ONLY /////
 
     let valid = this.validateForm(data);
 
@@ -47,7 +45,11 @@ class Contact extends Component {
       this.props.sendMail(data)
       .then(res => {
         if(res.status === 400) {
-          this.setState({ messageSent: false });
+          this.setState({ status: 'Zoinks! There was an Error! Try Again....' });
+
+          setTimeout(() => {
+            this.setState({ status: 'Send', messageSent: false });
+          }, 3000);
         } else {
           this.setState({ status: 'Message Sent!' });
         }
@@ -58,10 +60,8 @@ class Contact extends Component {
   handleSubmit(e) {
     e.preventDefault();
     this.setState({ messageSent: true });
-    //// TESTING ONLY /////////
-    this.googleCallback();
 
-    // UNCOMMENT THIS this.recaptcha.execute();
+    this.recaptcha.execute();
   }
 
   validateForm(data) {

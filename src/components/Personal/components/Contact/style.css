@@ -7,3 +7,9 @@ form.old-form label {
     color: #fff;
     margin: 1px;
 }
+form.old-form input[type="submit"] {
+    margin: 1em auto;
+}
+form.old-form input[disabled] {
+    opacity: 1;
+}

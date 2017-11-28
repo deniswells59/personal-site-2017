@@ -10,6 +10,7 @@ class Work extends Component {
 
     // Project Constants + Also File System for Images :P
     let PROJECTS = {
+      PP: 'PP',
       PT: 'PT',
       MT: 'MT',
       DW: 'DW'
@@ -17,7 +18,7 @@ class Work extends Component {
 
     this.state = {
       scrolledIn : false,       // Watches for scroll Animation
-      currentWork: PROJECTS.PT, // Sets initial Project
+      currentWork: PROJECTS.PP, // Sets initial Project
       projects   : PROJECTS,
     }
 
@@ -142,6 +143,12 @@ class Work extends Component {
 
             <SubNav
                 active='true'
+                clickHandler={ this.renderDetails }
+                initials='PP'
+                name='Pine + Palm'
+                url='pineandorpalm.com' />
+
+            <SubNav
                 clickHandler={ this.renderDetails }
                 initials='PT'
                 name='Prime Table'

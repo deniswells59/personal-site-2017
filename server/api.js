@@ -7,6 +7,7 @@ const client = new postmark.Client(process.env.POSTMARK);
 
 
 router.post('/send', (req, res) => {
+
   if(!req.body.gresponse) return res.status(400).send('No Bots Allowed');
 
   let key = process.env.GSECRET;
@@ -20,7 +21,7 @@ router.post('/send', (req, res) => {
 
     client.sendEmailWithTemplate({
       'From': 'me@deniswells.com',
-      'To': 'me@deniswells.com',
+      'To': 'deniswells59@gmail.com',
       'TemplateId': 3377063,
       'TemplateModel': {
         'name': req.body.name,

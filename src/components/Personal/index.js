@@ -27,13 +27,13 @@ class Personal extends Component {
         <div className="container">
           <div className="row">
 
-            <div className="col-xs-2">
+            <div className="hidden-xs col-sm-2">
               <div className="-section" id='nav-fixer'>
                 <Nav />
               </div>
             </div>
 
-            <div className="col-xs-10">
+            <div className="col-xs-12 col-sm-10">
               <div className="container-fluid">
                 <div className="row">
                   <div className="col-xs-12 -section">

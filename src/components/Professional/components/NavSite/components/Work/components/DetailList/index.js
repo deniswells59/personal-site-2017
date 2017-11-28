@@ -27,10 +27,10 @@ class DetailList extends Component {
             { this.props.title }
           </h2>
           <div className="work-links">
-            <a href={ this.props.github } className="work-href">
+            <a target="_blank" href={ this.props.github } className="work-href">
               <i className="icon-social-github icons"></i>
             </a>
-            <a href={ this.props.link } className="work-href">
+            <a target="_blank" href={ this.props.link } className="work-href">
               <i className="icon-link icons"></i>
             </a>
           </div>

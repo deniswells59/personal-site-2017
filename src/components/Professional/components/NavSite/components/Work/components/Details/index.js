@@ -11,12 +11,20 @@ class Details extends Component {
   render() {
     let detail;
     switch(this.props.current) {
+      case 'PP':
+        detail = <DetailList
+                    title='Pine + Palm'
+                    github='https://github.com/deniswells59/pine-and-or-palm'
+                    link='http://pineandorpalm.com'
+                    description="I created this for a local band in my hometown. We initially worked on an e-commerce store front, but canned it because the band didn't have enough merch to populate it. It's all still there if they want it or if you want it (please hire me..). I used React, Redux, and Headless Wordpress."
+                    fileName='PP'/>;
+        break;
       case 'PT':
         detail = <DetailList
                     title='Prime Table'
                     github='https://github.com/deniswells59/PrimeTable'
                     link='http://primetablestk.com'
-                    description="I made this. It was my first time getting paid to design something. I went for something dark and sophisticated and modern. So, check it out. I used jQuery and (full disclosure) a little bit of an HTML template that I bought for $14."
+                    description="I made this. It was my first time getting paid to design something. I went for something dark and sophisticated and modern. So, check it out. I used jQuery and, full disclosure, a little bit of an HTML template that I bought for $14. :)"
                     fileName='PT'/>;
         break;
       case 'MT':

@@ -2,3 +2,9 @@
   font-family: 'Comic';
   src: url(/fonts/ComicRelief.ttf);
 }
+
+@media (max-width: 992px) {
+  .hidden-xs {
+    display: none;
+  }
+}

@@ -6,6 +6,12 @@ class About extends Component {
     return (
       <div className='row animated fadeIn'>
         <div className='col-xs-12'>
+
+          <div className="img-wrapper">
+            <img src="/assets/profile.png" alt=""/>
+            <p className="img-desc">Me and a struggling kit-kat</p>
+          </div>
+
           <div className='about-text-wrapper'>
             <p>
               Hello. My name is Denis Wells and I am a Full Stack Web Developer. I first started to coding in 2013. A year later, I saw the
