@@ -9,7 +9,7 @@ class About extends Component {
 
           <div className="img-wrapper">
             <img src="/assets/profile.png" alt=""/>
-            <p className="img-desc">Me and a struggling kit-kat</p>
+            <p className="img-desc">Me and my distraught cat</p>
           </div>
 
           <div className='about-text-wrapper'>

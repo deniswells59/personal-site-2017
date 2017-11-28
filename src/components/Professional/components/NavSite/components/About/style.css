@@ -34,3 +34,8 @@
   border-radius: 2px;
   max-width: 300px;
 }
+
+p.img-desc {
+  font-size: .8em;
+  opacity: .7;
+}

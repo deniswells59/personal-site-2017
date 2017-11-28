@@ -1,3 +1,32 @@
 .App {
   text-align: center;
+  height: 100vh;
+}
+
+.past, .future {
+  height: 100%;
+  width: 50%;
+  display: inline-block;
+  text-align: center;
+}
+
+.past button, .future button {
+  position: relative;
+  top: 50vh;
+  color: #fff;
+}
+
+.past button {
+  background-image: url('/assets/sky.gif');
+  background-size: 250px auto;
+  font-family: 'Comic';
+}
+
+.future button {
+  background: #000046; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #000046, #1cb5e0); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #000046, #1cb5e0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border: 1px solid #b9b9b9;
+  border-radius: 2px;
+  font-family: 'Dosis', sans-serif;
 }

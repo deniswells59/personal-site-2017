@@ -13,7 +13,9 @@ import Professional from './components/Professional';
 ReactDOM.render((
   <BrowserRouter>
     <div>
-      <Route exact path="/" component={ App } />
+      <Route exact path="/" render={() => {
+          return <App isMobile={ isMobile } />
+        }} />
       <Route path="/personal" render={() => {
         return <Personal
                   addClass={ addClass }

@@ -84,7 +84,7 @@ class Parallax extends Component {
   render() {
     return (
       <div className="Parallax"
-           style={{ top: `${this.state.top}px` }}>
+           style={{ transform: `translateY(${this.state.top}px)` }}>
         { this.generateStars() }
       </div>
     );
